@@ -18,6 +18,7 @@ const eultimo = document.getElementById("Eultimo");
 const aultimo = document.getElementById("Aultimo");
 const eprimero = document.getElementById("Eprimero");
 const aprimero = document.getElementById("Aprimero");
+const ordenar = document.getElementById("ordenar");
 
 
 eultimo.addEventListener("click", () => {
@@ -44,5 +45,12 @@ eprimero.addEventListener("click", () => {
 aprimero.addEventListener("click", () => {
     console.log("aprimero")
     alumnos.unshift(agregar_primero);
+    lista.textContent = alumnos;
+})
+
+ordenar.addEventListener("click", () => {
+    console.log("ordenar")
+    alumnos.sort((a, b) => b.localeCompare(a));//ordenarlo de mayor a menor 
+    // alumnos.reverse();//ordenarlo de menor a mayor
     lista.textContent = alumnos;
 })
