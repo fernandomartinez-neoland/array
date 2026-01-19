@@ -8,6 +8,9 @@ const alumnos = [
     "cesar"
 ]
 
+const lista = document.getElementById("lista");
+lista.textContent = alumnos;
+
 const agregar_alumnos = "aaaaaa"
 const agregar_primero = "bbbbb"
 
@@ -18,22 +21,28 @@ const aprimero = document.getElementById("Aprimero");
 
 
 eultimo.addEventListener("click", () => {
-    console.log("eultimo")
-})
 
+    alumnos.pop();
+    lista.textContent = alumnos;
+
+})
 aultimo.addEventListener("click", () => {
 
-    console.log("antes: ", alumnos)
+
     alumnos.push(agregar_alumnos);
     // alumnos[alumnos.length] = agregar_alumnos;
-    console.log("despues: ", alumnos)
+    lista.textContent = alumnos;
 
 })
 
 eprimero.addEventListener("click", () => {
-    console.log("eprimero")
+
+    alumnos.shift();
+    lista.textContent = alumnos;
 })
 
 aprimero.addEventListener("click", () => {
     console.log("aprimero")
+    alumnos.unshift(agregar_primero);
+    lista.textContent = alumnos;
 })
