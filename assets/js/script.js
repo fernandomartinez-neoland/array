@@ -30,6 +30,7 @@ const eprimero = document.getElementById("Eprimero");
 const aprimero = document.getElementById("Aprimero");
 const ordenar = document.getElementById("ordenar");
 const eliminar_quinto = document.getElementById("eliminar_quinto");
+const replace_a = document.getElementById("replace_a");
 
 
 eultimo.addEventListener("click", () => {
@@ -81,3 +82,9 @@ eliminar_quinto.addEventListener("click", () => {
     lista.textContent = alumnos;
 })
 
+
+replace_a.addEventListener("click", () => {
+    alumnos[4] = alumnos.replace("a", "b");
+    console.log("aqui", alumnos)
+    lista.textContent = alumnos;
+})
