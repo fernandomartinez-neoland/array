@@ -1,4 +1,4 @@
-const alumnos = [
+let alumnos = [
     "jose",
     "kaleff",
     "marlon",
@@ -7,6 +7,16 @@ const alumnos = [
     "julia",
     "cesar"
 ]
+
+const alumnos_desordenados = [
+    "jose",
+    "kaleff",
+    "marlon",
+    "marc",
+    "alejo",
+    "julia",
+    "cesar"
+];
 
 const lista = document.getElementById("lista");
 lista.textContent = alumnos;
@@ -19,6 +29,7 @@ const aultimo = document.getElementById("Aultimo");
 const eprimero = document.getElementById("Eprimero");
 const aprimero = document.getElementById("Aprimero");
 const ordenar = document.getElementById("ordenar");
+const eliminar_quinto = document.getElementById("eliminar_quinto");
 
 
 eultimo.addEventListener("click", () => {
@@ -53,4 +64,20 @@ ordenar.addEventListener("click", () => {
     alumnos.sort((a, b) => b.localeCompare(a));//ordenarlo de mayor a menor 
     // alumnos.reverse();//ordenarlo de menor a mayor
     lista.textContent = alumnos;
+});
+
+
+ordenar.addEventListener("dblclick", () => {
+    console.log("desordenar", alumnos_desordenados)
+    alumnos = alumnos_desordenados;
+    lista.textContent = alumnos;
 })
+
+
+// eliminar º5
+
+eliminar_quinto.addEventListener("click", () => {
+    alumnos.splice(4, 1);
+    lista.textContent = alumnos;
+})
+
