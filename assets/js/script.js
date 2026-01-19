@@ -84,7 +84,7 @@ eliminar_quinto.addEventListener("click", () => {
 
 
 replace_a.addEventListener("click", () => {
-    alumnos[4] = alumnos.replace("a", "b");
+    alumnos[4] = alumnos[4].replace("a", "b");
     console.log("aqui", alumnos)
     lista.textContent = alumnos;
 })
